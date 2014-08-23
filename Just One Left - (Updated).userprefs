@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Win_Message.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Rules.cs" Line="5" Column="23" />
+      <File FileName="Assets\Scripts\PegBehavior.cs" Line="28" Column="16" />
+      <File FileName="Assets\Scripts\ButtonScript.cs" Line="13" Column="2" />
+      <File FileName="Assets\Scripts\Win_Message.cs" Line="9" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
