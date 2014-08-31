@@ -15,11 +15,11 @@ public class WinMessage : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
- 		if(GameLogic.restart)
+ 		if(GameLogic.getRestart())
 		{
 			Awake();
 		} 
-		else if (GameLogic.pegsLeft == 1)
+		else if (GameLogic.getPegsLeft() == 1)
 		{
 			text.text = "Congratulations";
 		}

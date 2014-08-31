@@ -18,9 +18,9 @@ public class PegBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameLogic.changePegState)
+		if (GameLogic.getChangePegState())
 		{
-			if(GameLogic.restart == true)
+			if(GameLogic.getRestart() == true)
 			{
 				Start ();
 			}
@@ -32,7 +32,7 @@ public class PegBehavior : MonoBehaviour {
 	
 	void checkShouldChangeSelectedPegColor () 
 	{
-		if (GameLogic.selectedPegName == name )
+		if (GameLogic.getPegName("selectedPegName") == name )
 		{
 			renderer.material.color = Color.blue;
 		}
@@ -44,9 +44,9 @@ public class PegBehavior : MonoBehaviour {
 	
 	void checkShouldChangeAllColorGray() 
 	{
-		if (GameLogic.selectedPegName == ""  &&
-		    GameLogic.locationName == "" &&
-		    GameLogic.middlePegName == "")
+		if (GameLogic.getPegName("selectedPegName") == ""  &&
+		    GameLogic.getPegName("locationName") == "" &&
+		    GameLogic.getPegName("middlePegName") == "")
 		{
 			renderer.material.color = Color.gray;
 		}
@@ -54,19 +54,19 @@ public class PegBehavior : MonoBehaviour {
 
 	void checkShouldMakeJumpMove() 
 	{
-		if (GameLogic.selectedPegName != ""  &&
-		    GameLogic.locationName != "" &&
-		    GameLogic.middlePegName != "")
+		if (GameLogic.getPegName("selectedPegName") != ""  &&
+		    GameLogic.getPegName("locationName") != "" &&
+		    GameLogic.getPegName("middlePegName") != "")
 		{
-			if (name == GameLogic.selectedPegName)
+			if (name == GameLogic.getPegName("selectedPegName"))
 			{
 				renderer.enabled = false;
 			} 
-			else if (name == GameLogic.locationName)
+			else if (name == GameLogic.getPegName("locationName"))
 			{
 				renderer.enabled = true;
 			}
-			else if (name == GameLogic.middlePegName)
+			else if (name == GameLogic.getPegName("middlePegName"))
 			{
 				renderer.enabled = false;
 			}

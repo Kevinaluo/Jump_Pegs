@@ -4,14 +4,14 @@ using System.Collections;
 public class GameLogic : MonoBehaviour {
 	static int[,,] gameBoardRepresentation;
 
-	public static string selectedPegName;  //The peg that the player first clicks.
-	public static string locationName;     //The empty location the selected peg jumps to.
-	public static string middlePegName;    //The peg that is being jumped over.
+	static string selectedPegName;  //The peg that the player first clicks.
+	static string locationName;     //The empty location the selected peg jumps to.
+	static string middlePegName;    //The peg that is being jumped over.
 
-	public static bool changePegState;     //Will communicate with PegBehavior in order to determine
-										   //when it is appropriate to change color and disable renderer
-	public static bool restart;
-	public static int pegsLeft;
+	static bool changePegState;     //Will communicate with PegBehavior in order to determine
+									//when it is appropriate to change color and disable renderer
+	static bool restart;
+	static int pegsLeft;
 	void Start() 
 	{
 		pegsLeft = 14;
@@ -202,5 +202,46 @@ public class GameLogic : MonoBehaviour {
 		locationName = "";
 		middlePegName = "";
 		changePegState = true;
+	}
+
+	public static int getPegsLeft()
+	{
+		return pegsLeft;
+	}
+
+	public static void setPegsLeft(int newPegsLeft)
+	{
+		pegsLeft = newPegsLeft;
+	}
+
+	public static bool getRestart()
+	{
+		return restart;
+	}
+	
+	public static void setRestart(bool newRestart)
+	{
+		restart = newRestart;
+	}
+
+	public static bool getChangePegState()
+	{
+		return changePegState;
+	}
+
+	public static string getPegName(string pegSelected)
+	{
+		if (pegSelected == "selectedPegName")
+		{
+			return selectedPegName;
+		}
+		else if (pegSelected == "locationName")
+		{
+			return locationName;
+		}
+		else //(pegSelected == "middlePegName")
+		{
+			return middlePegName;
+		}
 	}
 }

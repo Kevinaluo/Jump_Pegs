@@ -11,8 +11,8 @@ public class Game_Buttons : MonoBehaviour
 		if(GUI.Button(new Rect(Screen.width * (float)0.05, Screen.height * (float)0.1,
 		                       Screen.width * (float) 0.2, Screen.height * (float) 0.15), "Restart", style)) 
 		{
-			GameLogic.restart = true;
-			GameLogic.pegsLeft = 14;
+			GameLogic.setRestart (true);
+			GameLogic.setPegsLeft(14);
 		} 
 		if(GUI.Button(new Rect(Screen.width * (float)0.75, Screen.height * (float)0.1,
 		                       Screen.width * (float) 0.2, Screen.height * (float) 0.15), "Main Menu", style)) 
